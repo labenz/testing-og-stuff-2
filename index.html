@@ -25,6 +25,9 @@
    return 'Data you have entered may not be saved.';
   };
   
+  FB.Event.subscribe('edge.create', function(trackUrl){
+     alert('it worked!');
+  });
 
   window.addEventListener("pagehide", function(evt){
     var logger = document.getElementById('log_id');
