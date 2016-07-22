@@ -15,7 +15,7 @@
 <p>hi!!!!</p>
 <p><a href="http://espn.com">espn.com</a></p>
 
-
+<p id="log_id"></p>
 
 <script>
   window.onbeforeunload = function (e) {
@@ -25,7 +25,12 @@
    return 'Data you have entered may not be saved.';
   };
   
-  document.pagehide = function(){alert('yo');}
+
+  window.addEventListener("pagehide", function(evt){
+    var logger = document.getElementById('log_id');
+    logger.innerText = logger.innerText + " pagehide fired!";
+  }, false);
+
 </script>
 
 
