@@ -14,4 +14,14 @@
 
 <p>hi!!!!</p>
 
+
+<script>
+  window.onbeforeunload = function (e) {
+   e = e || window.event;
+   if (e) 
+    e.returnValue = 'Data you have entered may not be saved.';
+   return 'Data you have entered may not be saved.';
+  };
+</script>
+
 </html>
