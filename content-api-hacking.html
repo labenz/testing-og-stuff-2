@@ -599,7 +599,7 @@ function sortSentences(businessData){
 		
 		sentence.impact_score = 10000 * (sentence.score >= 0 ? 1 : -1) * Math.pow(sentence.score,2) * sentence.magnitude / sentence.frequency_score / Math.max(sentence.content.length, 20);
 		*/
-		sentence.impact_score = 10000 * (sentence.score >= 0 ? 1 : -1) * Math.pow(sentence.score,2) * sentence.magnitude /;
+		sentence.impact_score = 10000 * (sentence.score >= 0 ? 1 : -1) * Math.pow(sentence.score,2) * sentence.magnitude;
 		return -1 * sentence.impact_score; 
 	});
 }
